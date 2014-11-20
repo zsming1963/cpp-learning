@@ -36,5 +36,6 @@ int main(int argc, char const* argv[])
     b->Base::virtualPrint();
     b->virtualPrint();
 
+    delete b;
     return 0;
 }

@@ -9,9 +9,13 @@ class Base{
     public:
         virtual void display() = 0;
         virtual void show();
+        virtual ~Base();
     private:
         string _data;
 };
+Base::~Base(){
+
+}
 inline void Base::display(){
     cout << "This is base display" << endl;
 }
@@ -43,6 +47,8 @@ int main(int argc, char const* argv[])
 
     b->display();
     b->Base::display();
+
+    delete b;
 
     return 0;
 }
